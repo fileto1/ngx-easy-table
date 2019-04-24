@@ -324,7 +324,7 @@ export class BaseComponent implements OnInit, OnChanges {
   }
 
   get isLoading(): boolean {
-    const table = document.getElementById('table') as HTMLTableElement;
+    const table = document.getElementById(this.id) as HTMLTableElement;
     if (table && table.rows && table.rows.length > 3) {
       this.getLoadingHeight(table.rows);
     }
